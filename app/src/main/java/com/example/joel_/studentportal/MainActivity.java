@@ -17,15 +17,22 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    String mNewLinkUrl, mNewLinkName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+        Bundle extras = getIntent().getExtras();
 
         final List<Portal> mPortals = new ArrayList<>();
 
+        if(extras != null) {
+            mNewLinkUrl = extras.getString("newURL"); // retrieve the data using keyName
+            mNewLinkName = extras.getString("newName");
+            mPortals.add(new Portal(mNewLinkUrl,mNewLinkName));
+        }
         //Add a few standard Portals
         mPortals.add(new Portal("https://Google.com", "Google"));
         mPortals.add(new Portal("https://Facebook.com", "Facebook"));
@@ -72,4 +79,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

@@ -27,9 +27,10 @@ public class CreatePortalActivity extends AppCompatActivity {
                 mUrlText = mUrlButton.getText().toString();
                 mNameText = mNameButton.getText().toString();
 
-                //Maak hier nieuwe instantie van de portal class. Waarin ik url en text meegeef. Voeg deze vervolgens toe aan de list van Portal classes
-
                 Intent intent = new Intent(CreatePortalActivity.this, MainActivity.class);
+                intent.putExtra("newURL", mUrlText);
+                intent.putExtra("newName", mNameText);
+
                 startActivity(intent);
             }
         });
