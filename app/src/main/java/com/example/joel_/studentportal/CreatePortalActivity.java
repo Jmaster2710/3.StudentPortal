@@ -19,7 +19,7 @@ public class CreatePortalActivity extends AppCompatActivity {
 
         //Get all the objects
         final EditText mUrlButton = findViewById((R.id.urlText));
-        final EditText mNameButton = findViewById((R.id.urlText));
+        final EditText mNameButton = findViewById((R.id.nameText));
         final Button mConfirmButton = findViewById(R.id.addPortalButton);
 
         mConfirmButton.setOnClickListener(new View.OnClickListener() {

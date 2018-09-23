@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
 
     <EditText
         android:id="@+id/urlText"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInfoUrl" />
 
     <EditText
-        android:id="@+id/titleText"
+        android:id="@+id/nameText"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -59,7 +59,7 @@
         android:layout_width="368dp"
         android:layout_height="23dp"
         android:text="Portal Name"
-        app:layout_constraintBottom_toTopOf="@+id/titleText"
+        app:layout_constraintBottom_toTopOf="@+id/nameText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
