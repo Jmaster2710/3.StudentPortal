@@ -1,6 +1,7 @@
 package com.example.joel_.studentportal;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,17 @@ public class PortalAdapter extends RecyclerView.Adapter<PortalViewHolder> {
         // The holder argument is used to reference the views inside the viewHolder
 
         // Populate the views with the data from the list
+        holder.mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,PortalActivity.class);
+                intent.putExtra("Url", portalObject.getmLinkUrl());
+                context.startActivity(intent);
+
+            }
+        });
         holder.mButton.setText(portalObject.getmLinkName());
+
 
     }
 

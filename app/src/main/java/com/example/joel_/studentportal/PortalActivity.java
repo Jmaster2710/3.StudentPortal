@@ -4,14 +4,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PortalActivity extends AppCompatActivity {
 
+        String mUrl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Bundle extras = getIntent().getExtras();
+
+        if(extras != null) {
+            mUrl = extras.getString("Url"); // retrieve the data using keyName
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_portal);
 
-        String url = "https://www.google.com";
+        String url = mUrl;
         WebView myWebView = findViewById(R.id.webview);
         myWebView.loadUrl(url);
     }
